@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  --font-brand: "Fredoka", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-blue-50 text-slate-900 min-h-screen;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .brand-font {
+    font-family: var(--font-brand);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
